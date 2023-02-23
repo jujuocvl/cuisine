@@ -6,20 +6,22 @@ import javax.swing.JPanel;
 
 public class MyPanels extends JPanel {
 
-	private String title;
+	private static final long serialVersionUID = 1L;
+	
+	private String title; //attribut classe
 
 	public MyPanels(String title) {
 		super();
-		this.title = title;
+		this.title = title; //on instancie
+		
 		setLayout(new BorderLayout());
-		JPanel center = new JPanel(new GridLayout(0,2));
+		JPanel center = new JPanel(new GridLayout(0,1)); //rempli la première colonne puis la deuxième
 		MySection section1 = new MySection("Entrées", 4);
 		MySection section2 = new MySection("Plats", 3);
 		MySection section3 = new MySection("Desserts", 4);
 		center.add(section1);
 		center.add(section2);
 		center.add(section3);
-		
 
 		this.setLayout(new BorderLayout());
 		this.add(center, BorderLayout.CENTER);
