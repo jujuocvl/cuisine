@@ -4,3 +4,5 @@ public class Main {
 	} 
 }
 
+//redimensionner les données du panel
+//mettre le Jlabel au centré en haut de l'interface
